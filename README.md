@@ -47,11 +47,7 @@ When a TUN proxy with fake-ip mode (e.g. Clash.Meta/mihomo, sing-box) hijacks
 domain resolution, the system resolver answers with a fake-ip such as
 `198.18.x.x`. `geo look` detects this and re-queries public DNS servers
 (223.5.5.5, 119.29.29.29) binding to a physical interface address, so the
-lookup bypasses the tunnel. You can also specify a DNS server explicitly:
-
-```shell
-geo look --dns 192.168.1.2 example.com
-```
+lookup bypasses the tunnel.
 
 Supported databases for `look` command:
 
