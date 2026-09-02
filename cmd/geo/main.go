@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/metacubex/geo"
+	"github.com/haha12358/geo"
 
 	F "github.com/sagernet/sing/common/format"
 	"github.com/spf13/cobra"

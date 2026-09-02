@@ -7,7 +7,7 @@ import (
 	"net/netip"
 	"strings"
 
-	"github.com/metacubex/geo/encoding/v2raygeo"
+	"github.com/haha12358/geo/encoding/v2raygeo"
 
 	"github.com/maxmind/mmdbwriter"
 	"github.com/maxmind/mmdbwriter/inserter"

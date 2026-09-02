@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/metacubex/geo/geoip"
-	"github.com/metacubex/geo/geosite"
+	"github.com/haha12358/geo/geoip"
+	"github.com/haha12358/geo/geosite"
 
 	"github.com/spf13/cobra"
 )

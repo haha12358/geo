@@ -3,8 +3,8 @@ package geoip
 import (
 	"bytes"
 
-	"github.com/metacubex/geo/convert"
-	"github.com/metacubex/geo/encoding/v2raygeo"
+	"github.com/haha12358/geo/convert"
+	"github.com/haha12358/geo/encoding/v2raygeo"
 
 	"github.com/oschwald/maxminddb-golang"
 )

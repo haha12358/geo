@@ -1,15 +1,14 @@
 package main
 
 import (
-	"context"
 	"fmt"
 	"net"
 	"os"
 	"strings"
 	"time"
 
-	"github.com/metacubex/geo/geoip"
-	"github.com/metacubex/geo/geosite"
+	"github.com/haha12358/geo/geoip"
+	"github.com/haha12358/geo/geosite"
 
 	F "github.com/sagernet/sing/common/format"
 	"github.com/spf13/cobra"
@@ -20,6 +19,7 @@ func init() {
 	commandLook.PersistentFlags().StringVarP(&dbPath, "file", "f", "", "specify database file path")
 	commandLook.PersistentFlags().BoolVarP(&immediate, "immediate", "i", false, "return immediately as soon as a result is found")
 	commandLook.PersistentFlags().BoolVarP(&noResolve, "no-resolve", "", false, "set no resolve for domains")
+	commandLook.PersistentFlags().StringVarP(&dnsServer, "dns", "", "", "specify DNS server for nslookup (e.g. 223.5.5.5)")
 	mainCommand.AddCommand(commandLook)
 }
 
@@ -33,6 +33,7 @@ var commandLook = &cobra.Command{
 var (
 	immediate bool
 	noResolve bool
+	dnsServer string
 )
 
 func look(cmd *cobra.Command, args []string) error {
@@ -93,22 +94,11 @@ func look(cmd *cobra.Command, args []string) error {
 		if noResolve {
 			return nil
 		}
-		ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
-		defer cancel()
-
-		go func() {
-			<-ctx.Done()
-			fmt.Print("\n\n🌎Resolved ", domainName, " timeout")
-		}()
-
-		ips, err := net.DefaultResolver.LookupIP(ctx, "ip", domainName)
+		ip, err = resolveDomain(domainName)
 		if err != nil {
 			fmt.Println("\n\n❌Fail to resolve", domainName, ", skipped.")
+			ip = nil
 		}
-		if len(ips) != 0 {
-			ip = ips[0]
-		}
-
 		fmt.Print("\n\n🌎Resolved ", domainName, " as ", ip, "\n\n")
 	}
 

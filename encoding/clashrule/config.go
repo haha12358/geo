@@ -1,6 +1,6 @@
 package clashrule
 
-import "github.com/metacubex/geo/encoding/v2raygeo"
+import "github.com/haha12358/geo/encoding/v2raygeo"
 
 func GetClashRule(from v2raygeo.Domain_Type) string {
 

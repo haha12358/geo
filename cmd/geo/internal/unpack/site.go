@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/metacubex/geo/encoding/v2raygeo"
+	"github.com/haha12358/geo/encoding/v2raygeo"
 
 	"github.com/sagernet/sing/common"
 	"github.com/spf13/cobra"

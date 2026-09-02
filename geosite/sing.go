@@ -3,7 +3,7 @@ package geosite
 import (
 	"regexp"
 
-	"github.com/metacubex/geo/encoding/singgeo"
+	"github.com/haha12358/geo/encoding/singgeo"
 
 	"github.com/sagernet/sing/common/domain"
 )

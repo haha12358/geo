@@ -5,9 +5,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/metacubex/geo/encoding/clashrule"
-	"github.com/metacubex/geo/encoding/singgeo"
-	"github.com/metacubex/geo/encoding/v2raygeo"
+	"github.com/haha12358/geo/encoding/clashrule"
+	"github.com/haha12358/geo/encoding/singgeo"
+	"github.com/haha12358/geo/encoding/v2raygeo"
 
 	"github.com/sagernet/sing/common"
 	"gopkg.in/yaml.v3"

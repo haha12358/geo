@@ -1,4 +1,4 @@
-module github.com/metacubex/geo
+module github.com/haha12358/geo
 
 go 1.20
 
@@ -16,5 +16,6 @@ require (
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	go4.org/netipx v0.0.0-20220812043211-3cc044ffd68d // indirect
+	golang.org/x/net v0.23.0 // indirect
 	golang.org/x/sys v0.21.0 // indirect
 )

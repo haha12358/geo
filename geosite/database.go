@@ -4,7 +4,7 @@ import (
 	"errors"
 	"os"
 
-	"github.com/metacubex/geo/encoding/singgeo"
+	"github.com/haha12358/geo/encoding/singgeo"
 )
 
 type Type string
